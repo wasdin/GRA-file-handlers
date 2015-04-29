@@ -54,6 +54,7 @@ public class Path implements Comparable<Path> {
 		return output;
 	}
 	
+	// used to output in the format of the GRA file
 	public String toString(List<Location> verteces) {
 		LocationMatcher matcher = new LocationMatcher(verteces);
 		

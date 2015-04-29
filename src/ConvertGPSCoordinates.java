@@ -1,9 +1,9 @@
+// Use calcDist to calculate the distance between two locations or sets of points and return the distance in kilometers
 
-// code base supplied by Dr. Hunt, from http://kepler.covenant.edu/COS230/AsgDijkstraImproved/ConvertGPSCoordinantes.java
-// see http://www.movable-type.co.uk/scripts/latlong.html
+
+// code base supplied by Dr. John Hunt, from http://kepler.covenant.edu/COS230/AsgDijkstraImproved/ConvertGPSCoordinantes.java
+// He mentions to see http://www.movable-type.co.uk/scripts/latlong.html
 public class ConvertGPSCoordinates {
-// calcDist take two latitude / longitude pairs and returns the
-// distance between them in KILOMETERS
 	double calcDist(double lat1, double lon1, double lat2, double lon2){
 		double R = 6371; //km
 		double radLat1 = Math.toRadians(lat1);
@@ -32,9 +32,7 @@ public class ConvertGPSCoordinates {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @param args
-	 */
+	// Test method
 	public static void main(String[] args) {
 		ConvertGPSCoordinates convertGPSCoordinantes = new ConvertGPSCoordinates();
 		System.out.println(convertGPSCoordinantes.calcDist(33.796676,-84.394168,35.004133,-85.214009 ));

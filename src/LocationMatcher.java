@@ -1,6 +1,7 @@
 import java.util.List;
 
 // used to match locations and array indeces
+
 public class LocationMatcher {
 	List<Location> verteces;
 	
