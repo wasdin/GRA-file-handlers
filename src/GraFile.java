@@ -4,6 +4,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*The gra format has 3 parts: 
@@ -21,13 +23,13 @@ import java.util.Scanner;
 public class GraFile {
 	int numVertex;
 	int numPath;
-	GrowableArray<Location> verteces;
-	GrowableArray<Path> paths;
+	List<Location> verteces;
+	List<Path> paths;
 
 	// makes gra object from passed file
 	public GraFile(File passedGra) {
-		verteces = new GrowableArray<Location>();
-		paths = new GrowableArray<Path>();
+		verteces = new ArrayList<Location>();
+		paths = new ArrayList<Path>();
 		
 		try {
 			Scanner scanner = new Scanner(passedGra);
@@ -54,7 +56,7 @@ public class GraFile {
 	}
 	
 	// builds gra file from parts
-	public GraFile(GrowableArray<Location> passedVerteces, GrowableArray<Path> passedPaths) {
+	public GraFile(List<Location> passedVerteces, List<Path> passedPaths) {
 		verteces = passedVerteces;
 		paths = passedPaths;
 		numVertex = verteces.size();
@@ -103,19 +105,19 @@ public class GraFile {
 		this.numPath = numPath;
 	}
 
-	public GrowableArray<Location> getVerteces() {
+	public List<Location> getVerteces() {
 		return verteces;
 	}
 
-	public void setVerteces(GrowableArray<Location> verteces) {
+	public void setVerteces(List<Location> verteces) {
 		this.verteces = verteces;
 	}
 
-	public GrowableArray<Path> getPaths() {
+	public List<Path> getPaths() {
 		return paths;
 	}
 
-	public void setPaths(GrowableArray<Path> paths) {
+	public void setPaths(List<Path> paths) {
 		this.paths = paths;
 	}
 		

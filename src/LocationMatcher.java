@@ -1,8 +1,10 @@
+import java.util.List;
+
 // used to match locations and array indeces
 public class LocationMatcher {
-	GrowableArray<Location> verteces;
+	List<Location> verteces;
 	
-	public LocationMatcher(GrowableArray<Location> passedVerteces) {
+	public LocationMatcher(List<Location> passedVerteces) {
 		verteces = passedVerteces;
 	}
 	

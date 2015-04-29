@@ -1,3 +1,5 @@
+import java.util.List;
+
 // used to show the path between two cities
 
 public class Path implements Comparable<Path> {
@@ -7,7 +9,7 @@ public class Path implements Comparable<Path> {
 	String route;
 	
 	// passed String from gra file
-	public Path(String passedString, GrowableArray<Location> verteces) {
+	public Path(String passedString, List<Location> verteces) {
 		LocationMatcher matcher = new LocationMatcher(verteces);
 		
 		String parts[] = passedString.split(" ");
@@ -52,7 +54,7 @@ public class Path implements Comparable<Path> {
 		return output;
 	}
 	
-	public String toString(GrowableArray<Location> verteces) {
+	public String toString(List<Location> verteces) {
 		LocationMatcher matcher = new LocationMatcher(verteces);
 		
 		String output = "";
@@ -79,13 +81,13 @@ public class Path implements Comparable<Path> {
 		}
 	}
 	
-	public int getPoint1_int(GrowableArray<Location> verteces) {
+	public int getPoint1_int(List<Location> verteces) {
 		LocationMatcher matcher = new LocationMatcher(verteces);
 		
 		return matcher.LocationToPosition(point1);
 	}
 	
-	public int getPoint2_int(GrowableArray<Location> verteces) {
+	public int getPoint2_int(List<Location> verteces) {
 		LocationMatcher matcher = new LocationMatcher(verteces);
 
 		return matcher.LocationToPosition(point2);
